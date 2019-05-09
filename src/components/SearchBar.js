@@ -3,10 +3,12 @@ import React from 'react';
 class SearchBar extends React.Component {
   state = { term: '' };
 
-  onInputChange = () => {
+  onInputChange = event => {
+    this.setState({ term: event.target.value });
 
+    console.log(this.state.term);
   };
-  
+
   render() {
     return (
       <div className="search-bar ui segment">
